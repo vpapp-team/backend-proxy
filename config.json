@@ -9,8 +9,7 @@
 		"broadcast": {
 			"host": "broadcast.nigb.app",
 			"method": "POST",
-			"url": "/",
-			"secret": "0",
+			"url": "/"
 		},
 		"maxServerAge": 300000,
 		"httpPorts": [80],
@@ -22,39 +21,38 @@
 		},
 		"publicKey": "./publicKey.pem"
 	},
-	"endpointsTemplate": {
-		"host": "@",
-		"keepPath": true,
-		"allowUnsecure": false,
-		"secret": "0",
-		"servers": []
-	},
-	"serverTemplate": {
-		"newHost": "localhost",
-		"newPort": 1337,
-		"https": false,
-		"validateCert": false
+	"templates": {
+		"endpoints": {
+			"host": "@",
+			"keepPath": true,
+			"allowUnsecure": false,
+			"servers": []
+		},
+		"server": {
+			"newHost": "localhost",
+			"newPort": 1337,
+			"https": false,
+			"validateCert": false,
+			"uuid": "1337"
+		}
 	},
 	"endpoints": [
 		{
 			"host": "@",
 			"keepPath": true,
 			"allowUnsecure": true,
-		  "secret": "1",
 			"servers": []
 		},
 		{
 			"host": "admin.nigb.app",
 			"keepPath": true,
 			"allowUnsecure": true,
-		  "secret": "2",
 			"servers": []
 		},
 		{
 			"host": "api.nigb.app",
 			"keepPath": true,
 			"allowUnsecure": true,
-		  "secret": "3",
 			"servers": []
 		}
 	]

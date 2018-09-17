@@ -14,7 +14,9 @@
     "lint:fix": "eslint --fix ./"
   },
   "dependencies": {
-    "backend-logger": "github:vpapp-team/backend-logger"
+    "backend-logger": "github:vpapp-team/backend-logger",
+    "backend-util": "github:vpapp-team/backend-util",
+    "http-proxy": "^1.17.0"
   },
   "devDependencies": {
     "eslint": "^5.0.0"
