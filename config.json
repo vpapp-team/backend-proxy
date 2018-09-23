@@ -25,35 +25,33 @@
 		"endpoints": {
 			"host": "@",
 			"keepPath": true,
-			"allowUnsecure": false,
-			"servers": []
+			"allowUnsecure": false
 		},
 		"server": {
 			"newHost": "localhost",
 			"newPort": 1337,
+			"path": "/validate",
 			"https": false,
 			"validateCert": false,
-			"uuid": "1337"
+			"isSameServer": true,
+			"ep": ["api"]
 		}
 	},
 	"endpoints": [
 		{
 			"host": "@",
 			"keepPath": true,
-			"allowUnsecure": true,
-			"servers": []
+			"allowUnsecure": true
 		},
 		{
 			"host": "admin.nigb.app",
 			"keepPath": true,
-			"allowUnsecure": true,
-			"servers": []
+			"allowUnsecure": true
 		},
 		{
 			"host": "api.nigb.app",
 			"keepPath": true,
-			"allowUnsecure": true,
-			"servers": []
+			"allowUnsecure": true
 		}
 	]
 }
