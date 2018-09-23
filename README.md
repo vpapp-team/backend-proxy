@@ -57,7 +57,7 @@
 Location: `./config.json`
 
 | property | type | default | optional | description |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | general | object | / | no | general settings |
 | general.acceptHttp | boolean | false | yes | whether to accept http requests |
 | general.registration | clientLocation | / | no | location that gets reserved for registering to this proxy |
