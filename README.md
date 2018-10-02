@@ -39,6 +39,7 @@
 > | --- | --- | --- |
 > | host | string | the workers domain/ip |
 > | port | number | the workers port |
+> | method | string | method to use with validation request |
 > | path | string | to send validation request to |
 > | https | boolean | true to use https |
 > | validateCert | boolean | false to accept selfsigned/invalid tls certs |
