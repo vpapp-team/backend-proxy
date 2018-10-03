@@ -2,12 +2,14 @@
 	"general": {
 		"acceptHttp": false,
 		"registration": {
-			"host": "proxy.nigb.app",
+			"hostname": "proxy.nigb.app",
+			"port": 443,
 			"method": "CONNECT",
 			"url": "/login"
 		},
 		"broadcast": {
-			"host": "broadcast.nigb.app",
+			"hostname": "broadcast.nigb.app",
+			"port": 443,
 			"method": "POST",
 			"url": "/"
 		},

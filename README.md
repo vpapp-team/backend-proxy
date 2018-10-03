@@ -10,6 +10,7 @@
 | 301 | http to https redirect |
 | 400 | invalid signature, beacon failed, unknown ep or ep security problem |
 | 404 | unknown domain |
+| 409 | provided proxyUUID unknown |
 | 500 | sth went wrong |
 | 502 | no server for domain |
 
@@ -19,7 +20,7 @@
 >
 > | property | type | description |
 > | --- | --- | --- |
-> | host | string | ether a domain like "web.nigb.app" or "@" as default route |
+> | hostname | string | ether a domain like "web.nigb.app" or "@" as default route |
 > | keepPath | boolean | true to keep path with proxy redirect |
 > | allowUnsecure | boolean | true to allow http hosts and no validateCert |
 >
@@ -28,7 +29,8 @@
 >
 > | property | type | description |
 > | --- | --- | --- |
-> | host | string | the domain/ip and port of the host (e.g. "location1.nigb.app:1337") |
+> | hostname | string | the domain/ip of the host (e.g. "location1.nigb.app") |
+> | port | number | the port to connect to (e.g. 1337) |
 > | method | string | the http method to use (e.g. "POST") |
 > | url | string | the location to use (e.g. "/") |
 >
@@ -37,7 +39,7 @@
 >
 > | property | type | description |
 > | --- | --- | --- |
-> | host | string | the workers domain/ip |
+> | hostname | string | the workers domain/ip |
 > | port | number | the workers port |
 > | method | string | method to use with validation request |
 > | path | string | to send validation request to |
@@ -50,9 +52,10 @@
 1. request the endpoint provided in config.general.registration including:
   * the sign in `header.sign`
   * the config (type: [workerServer](#workerServer))
-2. wait for the validation request to the required path and respond with 200
-3. save the header.uuid string
-4. after less then config.general.maxServerAge seconds re-register using the uuid in header.uuid
+  * some id in `header.reqID`
+2. wait for the validation request to the required path, check whether the `header.reqID` is valid and respond with 200
+3. save the `header.proxyUUID` string
+4. after less then config.general.maxServerAge seconds re-register using the uuid in `header.proxyUUID`
 
 # config
 Location: `./config.json`
@@ -61,11 +64,11 @@ Location: `./config.json`
 | --- | --- | --- | --- | --- |
 | general | object | / | no | general settings |
 | general.acceptHttp | boolean | false | yes | whether to accept http requests |
-| general.registration | clientLocation | / | no | location that gets reserved for registering to this proxy |
-| general.broadcast | clientLocation | null | yes | location that gets reserverd for broadcasting on this proxy |
+| general.registration | [clientLocation](#clientlocation) | / | no | location that gets reserved for registering to this proxy |
+| general.broadcast | [clientLocation](#clientlocation) | null | yes | location that gets reserverd for broadcasting on this proxy |
 | general.maxServerAge | number | 300000 | yes |milliseconds after which a server gets invalidated if it doesnt reauth |
 | general.httpPorts | [number] | [80] | yes | array of http ports to listen on |
 | general.httpsPorts | [number] | [] | yes | array of https ports to listen on |
 | general.SECURE_CONTEXT | object | null | only when no httpsPorts provided | [options to pass to the https.createServer func](https://nodejs.org/api/https.html#https_https_createserver_options_requestlistener) |
 | general.publicKey | string | / | no | location of the publicKey to confirm register requests |
-| endpoints | [endpoint] | [] | yes | array of served endpoints |
+| endpoints | [[endpoint](#endpoint)] | [] | yes | array of served endpoints |
