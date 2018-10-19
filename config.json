@@ -1,57 +1,38 @@
 {
 	"general": {
-		"acceptHttp": false,
 		"registration": {
 			"hostname": "proxy.nigb.app",
 			"port": 443,
-			"method": "CONNECT",
+			"method": "SUBSCRIBE",
 			"url": "/login"
 		},
 		"broadcast": {
 			"hostname": "broadcast.nigb.app",
 			"port": 443,
-			"method": "POST",
+			"method": "NOTIFY",
 			"url": "/"
 		},
-		"maxServerAge": 300000,
-		"httpPorts": [80],
 		"httpsPorts": [443],
 		"SECURE_CONTEXT": {
-		  "key": "/etc/letsencrypt/live/nigb.app/privkey.pem",
-		  "cert": "/etc/letsencrypt/live/nigb.app/cert.pem",
-		  "ca": "/etc/letsencrypt/live/nigb.app/fullchain.pem"
+			"key": "/etc/letsencrypt/live/nigb.app/privkey.pem",
+			"cert": "/etc/letsencrypt/live/nigb.app/cert.pem",
+			"ca": "/etc/letsencrypt/live/nigb.app/fullchain.pem"
 		},
 		"publicKey": "./publicKey.pem"
 	},
-	"templates": {
-		"endpoints": {
-			"host": "@",
+	"endpoints": [
+		{
+			"hostname": "@",
+			"keepPath": true,
+			"allowUnsecure": true
+		},
+		{
+			"hostname": "admin.nigb.app",
 			"keepPath": true,
 			"allowUnsecure": false
 		},
-		"server": {
-			"newHost": "localhost",
-			"newPort": 1337,
-			"path": "/validate",
-			"https": false,
-			"validateCert": false,
-			"isSameServer": true,
-			"ep": ["api"]
-		}
-	},
-	"endpoints": [
 		{
-			"host": "@",
-			"keepPath": true,
-			"allowUnsecure": true
-		},
-		{
-			"host": "admin.nigb.app",
-			"keepPath": true,
-			"allowUnsecure": true
-		},
-		{
-			"host": "api.nigb.app",
+			"hostname": "10.10.0.125",
 			"keepPath": true,
 			"allowUnsecure": true
 		}

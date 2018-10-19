@@ -45,7 +45,7 @@
 > | path | string | to send validation request to |
 > | https | boolean | true to use https |
 > | validateCert | boolean | false to accept selfsigned/invalid tls certs |
-> | isSameServer | boolean | true if connection is to localhost
+> | isSameServer | boolean | true if connection is to localhost, disables some hasToBeSecure validations |
 > | ep | [string] | list of the ep's to register for |
 
 # register
