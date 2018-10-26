@@ -13,6 +13,7 @@
 | 409 | provided proxyUUID unknown |
 | 500 | sth went wrong |
 | 502 | no server for domain |
+| xxx | error redirected from the endpoint requesting |
 
 # types
 > ## endpoint
