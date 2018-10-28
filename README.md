@@ -8,7 +8,7 @@
 | --- | --- |
 | 200 | All fine |
 | 301 | http to https redirect |
-| 400 | invalid signature, beacon failed, unknown ep or ep security problem |
+| 400 | invalid signature, beacon failed, body(size) invalid, unknown ep or ep security problem |
 | 404 | unknown domain |
 | 409 | provided proxyUUID unknown |
 | 500 | sth went wrong |
@@ -47,7 +47,8 @@
 > | https | boolean | true to use https |
 > | validateCert | boolean | false to accept selfsigned/invalid tls certs |
 > | isSameServer | boolean | true if connection is to localhost, disables some hasToBeSecure validations |
-> | ep | [string] | list of the ep's to register for |
+> | receiveEP | [string] | list of the ep's to register for redirects |
+> | broadcastEP | [string] | list of the ep's being allowed to broadcast to |
 
 # register
 1. request the endpoint provided in config.general.registration including:
