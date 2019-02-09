@@ -23,17 +23,14 @@
 	"endpoints": [
 		{
 			"hostname": "@",
-			"keepPath": true,
 			"allowUnsecure": true
 		},
 		{
 			"hostname": "admin.nigb.app",
-			"keepPath": true,
 			"allowUnsecure": false
 		},
 		{
 			"hostname": "10.10.0.125",
-			"keepPath": true,
 			"allowUnsecure": true
 		}
 	]

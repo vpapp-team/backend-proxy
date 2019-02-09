@@ -22,7 +22,6 @@
 > | property | type | description |
 > | --- | --- | --- |
 > | hostname | string | ether a domain like "web.nigb.app" or "@" as default route |
-> | keepPath | boolean | true to keep path with proxy redirect |
 > | allowUnsecure | boolean | true to allow http hosts and no validateCert |
 >
 > ## clientLocation
