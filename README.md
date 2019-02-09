@@ -64,7 +64,7 @@ Location: `./config.json`
 | property | type | default | optional | description |
 | --- | --- | --- | --- | --- |
 | general | object | / | no | general settings |
-| general.acceptHttp | boolean | false | yes | whether to accept http requests |
+| general.redirectHttp | boolean | true (when https ports set) | yes | whether to redirect http requests to https |
 | general.registration | [clientLocation](#clientlocation) | / | no | location that gets reserved for registering to this proxy |
 | general.broadcast | [clientLocation](#clientlocation) | null | yes | location that gets reserverd for broadcasting on this proxy |
 | general.maxServerAge | number | 300000 | yes |milliseconds after which a server gets invalidated if it doesnt reauth |
