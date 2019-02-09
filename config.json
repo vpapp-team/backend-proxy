@@ -17,7 +17,7 @@
 			"cert": "/etc/letsencrypt/live/nigb.app/cert.pem",
 			"ca": "/etc/letsencrypt/live/nigb.app/fullchain.pem"
 		},
-		"publicKey": "./publicKey.pem"
+		"publicKey": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwzrIVgaH8Ian5Y4BycMp\nm7yyPPI+TeAXtk5v96ZrMgnOm/QkZXvfI+N9Xyez/A4j58kIaLQ9iJ603vaZ5udG\nLEILU21g6YI2KBWzv8oMbWSLdLZG3zgkBGLXqqc6GNACzrBvY9/J3VP7//BdsPzz\n3sySSoxKgFQWh0HgHGZtIUFeqJx1Lh5H1dBIAa/WN6nAuTnRb5clC1+pydx8CTkN\ngj26IgvkeDnlrGqIiW6jPlhLrVznb9V68SdhCy/FhoWvTMbDn3sYwkFJ/7Jozz+Z\nYCHI5CkGC8E2DFiFyCjJmr7pqXQEDiJQTYTT7URD4ba+N2m8CVlaA3vf4keioy4a\nkFPzKqL+Wq+0+rMrfyQzGLE1wRDVIoTnOho2rzsHkSCziLLWo8xz0AtAlPDtrlQA\nsjfoVwJoxDdkJybddLJE1Kh/ojaDCqwr5Wk1lDPfEeqQx0STt2EfhFQvoxwa0pjt\nrC2rWCe/SIV9UjXFt7UEviYG8ojynedE5uD9xI+TVo/g/USIXa/lu6KvZHasvjYP\n1lnRFeGKYTQX5DVNifkWDyrt75/X/57yOl+2iyE2s2P1Q74CjgZZ+6eVxaV6cuo6\nRfADpFtBDAM+BX/EHV6zlHY1vpDVPJ0K1rVo1gRl1NaAUX8iHgnDRo1kysPJPHb9\n0GKy9eYeupTLMqjf9bo5uK8CAwEAAQ==\n-----END PUBLIC KEY-----\n"
 	},
 	"endpoints": [
 		{

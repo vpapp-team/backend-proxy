@@ -71,5 +71,5 @@ Location: `./config.json`
 | general.httpPorts | [number] | [80] | yes | array of http ports to listen on |
 | general.httpsPorts | [number] | [] | yes | array of https ports to listen on |
 | general.SECURE_CONTEXT | object | null | only when no httpsPorts provided | [options to pass to the https.createServer func](https://nodejs.org/api/https.html#https_https_createserver_options_requestlistener) |
-| general.publicKey | string | / | no | location of the publicKey to confirm register requests |
+| general.publicKey | string | / | no | the publicKey read as a string |
 | endpoints | [[endpoint](#endpoint)] | [] | yes | array of served endpoints |
