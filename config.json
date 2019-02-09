@@ -4,13 +4,12 @@
 			"hostname": "proxy.nigb.app",
 			"port": 443,
 			"method": "SUBSCRIBE",
-			"url": "/login"
+			"path": "/login"
 		},
 		"broadcast": {
 			"hostname": "broadcast.nigb.app",
 			"port": 443,
-			"method": "NOTIFY",
-			"url": "/"
+			"method": "NOTIFY"
 		},
 		"httpsPorts": [443],
 		"SECURE_CONTEXT": {

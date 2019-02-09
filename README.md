@@ -27,12 +27,12 @@
 > ## clientLocation
 > type: object
 >
-> | property | type | description |
-> | --- | --- | --- |
-> | hostname | string | the domain/ip of the host (e.g. "location1.nigb.app") |
-> | port | number | the port to connect to (e.g. 1337) |
-> | method | string | the http method to use (e.g. "POST") |
-> | url | string | the location to use (e.g. "/") |
+> | property | type | optional | description |
+> | --- | --- | --- | --- |
+> | hostname | string | false | the domain/ip of the host (e.g. "location1.nigb.app") |
+> | port | number | true | the port to connect to (e.g. 1337) |
+> | method | string | false | the http method to use (e.g. "POST") |
+> | path | string | true | the location to use (e.g. "/") |
 >
 > ## workerServer
 > type: object
