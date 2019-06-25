@@ -19,7 +19,7 @@
     "http-proxy": "^1.17.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.0"
+    "eslint": "^6.0.1"
   },
   "engines": {
     "node": ">=8"
