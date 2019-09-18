@@ -16,7 +16,7 @@
   "dependencies": {
     "backend-logger": "github:vpapp-team/backend-logger",
     "backend-util": "github:vpapp-team/backend-util",
-    "http-proxy": "^1.17.0"
+    "http-proxy": "^1.18.0"
   },
   "devDependencies": {
     "eslint": "^6.0.0"
